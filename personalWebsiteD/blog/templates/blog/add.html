@@ -1,0 +1,16 @@
+{% extends "blog/layout.html" %}
+{% block title %} 
+Add Blog
+{% endblock %} 
+{% block heading %} 
+ADD BLOG
+{% endblock %} 
+{% block body %} 
+        <form action="{% url 'blog:add' %}" method="post">
+            {% csrf_token %} 
+            {{ form }}
+            <input type="submit">
+        </form>
+        <a href="{% url 'blog:index' %}">Home</a>
+
+{% endblock %}

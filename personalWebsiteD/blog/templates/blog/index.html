@@ -1,0 +1,17 @@
+{% extends "blog/layout.html" %}
+{% block title %} 
+Blogs 
+{% endblock %} 
+{% block heading %} 
+BLOG POSTS
+{% endblock %} 
+{% block body %} 
+
+    {% for key, value in blogs %} 
+        <h2>{{key}}</h2>
+        <div>{{value}}</div>
+    {% endfor %} 
+<div><br/><br/></div>
+<div><a href="{% url 'blog:add' %}">Write a New Blog</a></div>
+{% endblock %}
+
